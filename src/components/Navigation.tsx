@@ -43,7 +43,11 @@ export function Navigation() {
                 <motion.div
                   className="cursor-pointer"
                   whileHover={{ scale: 1.05 }}
-                  style={{ fontFamily: 'var(--font-poppins)', fontWeight: '600', fontSize: 'clamp(1.125rem, 2vw, 1.5rem)' }}
+                  style={{
+                    fontFamily: "var(--font-poppins)",
+                    fontWeight: "600",
+                    fontSize: "clamp(1.125rem, 2vw, 1.5rem)",
+                  }}
                 >
                   <span className="text-[#2D70C9]">Ungraded</span>
                   <span className="text-[#1A1A1A]"> AI</span>
@@ -57,10 +61,10 @@ export function Navigation() {
                     <motion.button
                       className={`transition-colors ${
                         location.pathname === link.path
-                          ? 'text-[#2D70C9]'
-                          : 'text-[#1A1A1A] hover:text-[#2D70C9]'
+                          ? "text-[#2D70C9]"
+                          : "text-[#1A1A1A] hover:text-[#2D70C9]"
                       }`}
-                      style={{ fontFamily: 'var(--font-inter)' }}
+                      style={{ fontFamily: "var(--font-inter)" }}
                       whileHover={{ y: -2 }}
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -77,17 +81,19 @@ export function Navigation() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: navLinks.length * 0.1 }}
                 >
-                  <Button
-                    size="sm"
-                    style={{
-                      backgroundColor: '#2D70C9',
-                      fontFamily: 'var(--font-poppins)',
-                      paddingLeft: '1.5rem',
-                      paddingRight: '1.5rem',
-                    }}
-                  >
-                    Start Free Trial
-                  </Button>
+                  <a href="https://app.ungradedai.com/signup">
+                    <Button
+                      size="sm"
+                      style={{
+                        backgroundColor: "#2D70C9",
+                        fontFamily: "var(--font-poppins)",
+                        paddingLeft: "1.5rem",
+                        paddingRight: "1.5rem",
+                      }}
+                    >
+                      Start Free Trial
+                    </Button>
+                  </a>
                 </motion.div>
               </div>
 
@@ -114,14 +120,18 @@ export function Navigation() {
               >
                 <div className="px-4 py-4 space-y-3">
                   {navLinks.map((link, index) => (
-                    <Link key={link.path} to={link.path} onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       <motion.button
                         className={`block w-full text-left py-2 transition-colors ${
                           location.pathname === link.path
-                            ? 'text-[#2D70C9]'
-                            : 'text-[#1A1A1A] hover:text-[#2D70C9]'
+                            ? "text-[#2D70C9]"
+                            : "text-[#1A1A1A] hover:text-[#2D70C9]"
                         }`}
-                        style={{ fontFamily: 'var(--font-inter)' }}
+                        style={{ fontFamily: "var(--font-inter)" }}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.05 }}
@@ -136,15 +146,17 @@ export function Navigation() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: navLinks.length * 0.05 }}
                   >
-                    <Button
-                      className="w-full"
-                      style={{
-                        backgroundColor: '#2D70C9',
-                        fontFamily: 'var(--font-poppins)',
-                      }}
-                    >
-                      Start Free Trial
-                    </Button>
+                    <a href="https://app.ungradedai.com/signup">
+                      <Button
+                        className="w-full"
+                        style={{
+                          backgroundColor: "#2D70C9",
+                          fontFamily: "var(--font-poppins)",
+                        }}
+                      >
+                        Start Free Trial
+                      </Button>
+                    </a>
                   </motion.div>
                 </div>
               </motion.div>
