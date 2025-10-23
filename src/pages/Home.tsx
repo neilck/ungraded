@@ -22,6 +22,7 @@ import {
   Zap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "figma:asset/2e34608689babe8aa3df340c03e28bd805bf2693.png";
 
 export function Home() {
   const features = [
@@ -139,20 +140,6 @@ export function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-              >
-                <Badge
-                  className="mb-6 bg-[#EAF2FB] text-[#2D70C9] border-[#2D70C9]/20"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  <Zap className="w-3 h-3 mr-1" />
-                  Trusted by 500+ Educators
-                </Badge>
-              </motion.div>
-
               <motion.h1
                 className="text-[#1A1A1A] mb-6"
                 style={{
@@ -211,6 +198,7 @@ export function Home() {
                     </Button>
                   </a>
                 </motion.div>
+                {/*
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -233,6 +221,7 @@ export function Home() {
                     Watch Demo
                   </Button>
                 </motion.div>
+                */}
               </motion.div>
 
               <motion.div
@@ -264,9 +253,9 @@ export function Home() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <ImageWithSkeleton
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                  alt="Teachers collaborating"
+                <img
+                  src={heroImage}
+                  alt="Personalized one-on-one learning"
                   className="w-full h-auto"
                 />
               </motion.div>
@@ -460,30 +449,27 @@ export function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-[#EAF2FB] relative overflow-hidden">
-        <ParallaxSection
-          speed={0.4}
-          className="absolute inset-0 pointer-events-none opacity-30"
-        >
+      {/* Testimonials - Hidden until real testimonials are added */}
+      {/* <section className="py-16 sm:py-20 lg:py-32 bg-[#EAF2FB] relative overflow-hidden">
+        <ParallaxSection speed={0.4} className="absolute inset-0 pointer-events-none opacity-30">
           <div className="absolute top-10 left-1/4 w-64 h-64 bg-white rounded-full blur-2xl"></div>
           <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-[#2D70C9]/10 rounded-full blur-3xl"></div>
         </ParallaxSection>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
-          <motion.div
+          <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2
+            <h2 
               className="text-[#1A1A1A] mb-6"
-              style={{
-                fontFamily: "var(--font-poppins)",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                fontWeight: "600",
+              style={{ 
+                fontFamily: 'var(--font-poppins)',
+                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontWeight: '600'
               }}
             >
               Loved by Educators
@@ -503,41 +489,20 @@ export function Home() {
                 <Card className="p-8 h-full bg-white hover:shadow-xl transition-shadow">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 fill-[#2D70C9] text-[#2D70C9]"
-                      />
+                      <Star key={i} className="w-5 h-5 fill-[#2D70C9] text-[#2D70C9]" />
                     ))}
                   </div>
-                  <p
-                    className="text-gray-700 mb-6 italic"
-                    style={{
-                      fontFamily: "var(--font-inter)",
-                      lineHeight: "1.6",
-                    }}
-                  >
+                  <p className="text-gray-700 mb-6 italic" style={{ fontFamily: 'var(--font-inter)', lineHeight: '1.6' }}>
                     "{testimonial.quote}"
                   </p>
                   <div>
-                    <p
-                      className="text-[#1A1A1A]"
-                      style={{
-                        fontFamily: "var(--font-poppins)",
-                        fontWeight: "600",
-                      }}
-                    >
+                    <p className="text-[#1A1A1A]" style={{ fontFamily: 'var(--font-poppins)', fontWeight: '600' }}>
                       {testimonial.author}
                     </p>
-                    <p
-                      className="text-gray-600 text-sm"
-                      style={{ fontFamily: "var(--font-inter)" }}
-                    >
+                    <p className="text-gray-600 text-sm" style={{ fontFamily: 'var(--font-inter)' }}>
                       {testimonial.role}
                     </p>
-                    <p
-                      className="text-gray-500 text-sm"
-                      style={{ fontFamily: "var(--font-inter)" }}
-                    >
+                    <p className="text-gray-500 text-sm" style={{ fontFamily: 'var(--font-inter)' }}>
                       {testimonial.school}
                     </p>
                   </div>
@@ -546,7 +511,7 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <motion.section
@@ -587,8 +552,7 @@ export function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Join 500+ educators using Ungraded to give meaningful feedback at
-            scale.
+            Join educators using Ungraded to give meaningful feedback at scale.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"

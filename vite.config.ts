@@ -17,6 +17,22 @@ export default defineConfig({
       "next-themes@0.4.6": "next-themes",
       "lucide-react@0.487.0": "lucide-react",
       "input-otp@1.4.2": "input-otp",
+      "figma:asset/e01f259c598ff63bf85bb2fb4f9511909615b673.png": path.resolve(
+        __dirname,
+        "./src/assets/e01f259c598ff63bf85bb2fb4f9511909615b673.png"
+      ),
+      "figma:asset/6ea8c342f75fa31a8c9b0f9ba9fe8c08f373ead8.png": path.resolve(
+        __dirname,
+        "./src/assets/6ea8c342f75fa31a8c9b0f9ba9fe8c08f373ead8.png"
+      ),
+      "figma:asset/5357663d913d7a1ddda7f42871e9ea8459940468.png": path.resolve(
+        __dirname,
+        "./src/assets/5357663d913d7a1ddda7f42871e9ea8459940468.png"
+      ),
+      "figma:asset/2e34608689babe8aa3df340c03e28bd805bf2693.png": path.resolve(
+        __dirname,
+        "./src/assets/2e34608689babe8aa3df340c03e28bd805bf2693.png"
+      ),
       "embla-carousel-react@8.6.0": "embla-carousel-react",
       "cmdk@1.1.1": "cmdk",
       "class-variance-authority@0.7.1": "class-variance-authority",
@@ -55,7 +71,7 @@ export default defineConfig({
     outDir: "dist",
   },
   server: {
-    port: 3000,
+    port: 3005,
     open: true,
   },
 });
