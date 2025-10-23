@@ -23,7 +23,7 @@ export function Navigation() {
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "Roadmap", path: "/roadmap" },
-    { label: "Resources", path: "/resources" },
+    // { label: "Resources", path: "/resources" },
   ];
 
   return (
